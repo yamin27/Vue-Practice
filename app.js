@@ -7,7 +7,9 @@ new Vue({
 
     data: {
         name: 'Yamin Alam Sarker',
-        post: 'Software Engineer'
+        post: 'Software Engineer',
+        website: 'http://yaminalam.com',
+        websiteTag: '<a href="http://yaminalam.com">My Website</a>',
     },
 
     methods: {

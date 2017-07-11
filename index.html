@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8">
         <title>VueJS Tutorials</title>
@@ -8,11 +8,18 @@
     </head>
     <body>
     <div id="vue-app">
+
+        <h1>Data Binding</h1>
+
+        <h3> <a v-bind:href="website">My Website</a></h3>
         <h1>{{ greet('afternoon') }}</h1>
         <h1>My Name : {{ name }}</h1>
         <h3>My Post: {{post}}</h3>
 
+        <input type="text" v-bind:value="name">
         <h3>another method Vatman : {{vatman('on Education')}}</h3>
+
+        <p v-html="websiteTag"></p>
     </div>
 
 
