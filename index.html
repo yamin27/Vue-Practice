@@ -7,13 +7,31 @@
         <script src="https://unpkg.com/vue"></script>
     </head>
     <body>
+
     <div id="vue-app">
         <h1>{{ greet('afternoon') }}</h1>
         <h1>My Name : {{ name }}</h1>
         <h3>My Post: {{post}}</h3>
 
         <h3>another method Vatman : {{vatman('on Education')}}</h3>
+
+        <h1>Events</h1>
+        <button v-on:click.once="add(1)">add one year</button>
+        <button v-on:click="subtruct(1)">Subtruck one year</button>
+        <button @click="add(10)">add 10 year</button>
+        <button @click="subtruct(10)">subtruck 10 year</button>
+
+        <p>my age is now : {{ age }}</p>
+
+        <div id="canvas" @mousemove="updateXY">{{ x}}, {{ y }}</div>
+
+        <p><a v-on:click.prevent="click" href="http://www.thenetninja.co.uk">The Net Ninja</a></p>
+
+        <h1>key board Event</h1>
+        Name : <input type="text" @keyup.enter="logName">
+        age : <input type="text" @keyup="logAge">
     </div>
+
 
 
     <script src="app.js"></script>

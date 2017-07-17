@@ -7,7 +7,10 @@ new Vue({
 
     data: {
         name: 'Yamin Alam Sarker',
-        post: 'Software Engineer'
+        post: 'Software Engineer',
+        age: 25,
+        x:0,
+        y:0,
     },
 
     methods: {
@@ -17,9 +20,36 @@ new Vue({
 
         vatman:function(valo){
             return "vatman on fire " + valo;
+        },
+        add: function (increment) {
+            this.age += increment;
+        },
+        subtruct: function(decrement){
+            this.age -= decrement;
+        },
+
+        updateXY: function(event){
+            this.x = event.offsetX;
+            this.y = event.offsetY;
+        },
+
+        click: function(){
+            alert('you clicked me');
+        },
+
+        logName: function () {
+            console.log('your keyup work on name');
+        },
+
+        logAge: function () {
+            console.log('yoru keyup work on age' );
         }
 
+
+
     },
+
+
 
 
 });
