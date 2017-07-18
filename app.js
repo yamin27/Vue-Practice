@@ -6,7 +6,8 @@ new Vue({
     el: '#vue-app',
 
     data: {
-        name: 'Yamin Alam Sarker',
+        name: '',
+        boyos: '',
         post: 'Software Engineer',
         age: 25,
         x:0,
